@@ -7,7 +7,7 @@ const Header = () => {
       <div className='h-full container mx-auto flex items-center px-6 justify-between'>
         <div>
           <Link to='/' className='text-blue-600 font-bold'>
-            Mohan
+            Mern Authentication System
           </Link>
         </div>
 
