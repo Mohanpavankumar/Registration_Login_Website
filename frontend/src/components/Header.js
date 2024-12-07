@@ -13,6 +13,9 @@ const Header = () => {
 
         <div className='flex items-center'>
           <div>
+            <Link to='/sign-up' className='px-3 py-1 text-blue-600 font-bold hover:text-blue-800'>Sign Up</Link>
+          </div>
+          <div>
             <Link to='/login' className='px-3 py-1 text-blue-600 font-bold hover:text-blue-800'>Login</Link>
           </div>
         </div>
