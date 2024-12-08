@@ -11,7 +11,7 @@ async function userSignUpController(req,res){
         if(user){
             throw new Error("Already user existed!")
         }
-
+        // Checking the credentials
         if(!email){
             throw new Error("Please provide email")
         }
@@ -55,4 +55,4 @@ async function userSignUpController(req,res){
     }
 }
 
-module.exports = userSignUpController
+module.exports = userSignUpController;
