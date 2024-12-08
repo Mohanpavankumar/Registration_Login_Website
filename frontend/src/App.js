@@ -9,7 +9,8 @@ import SummaryApi from './EndPoints/index';
 import Context from './context';
 
 function App() {
-
+  
+  //Fetching user details
   const fetchUserDetails = async () => {
     try {
         const dataResponse = await fetch(SummaryApi.current_user.url, {
