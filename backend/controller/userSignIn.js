@@ -6,6 +6,7 @@ async function userSignInController(req,res){
     try{
         const {email, password} = req.body
 
+        //Checking the credentials
         if(!email){
             throw new Error("Please provide email")
         }
@@ -54,4 +55,4 @@ async function userSignInController(req,res){
         })
     }
 }
-module.exports = userSignInController
+module.exports = userSignInController;
