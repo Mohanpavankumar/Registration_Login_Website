@@ -4,20 +4,20 @@ const jwt = require('jsonwebtoken');
 
 async function userSignInController(req,res){
     try{
-        const {email, password} = req.body
+        const {email, password} = req.body;
 
         //Checking the credentials
         if(!email){
-            throw new Error("Please provide email")
+            throw new Error("Please provide email");
         }
         if(!password){
-            throw new Error("Please provide password")
+            throw new Error("Please provide password");
         }
 
-        const user = await userModel.findOne({email})
+        const user = await userModel.findOne({email});
         
         if(!user){
-            throw new Error("User not found!")
+            throw new Error("User not found!");
         }
 
         const checkPassword = await bcrypt.compare(password, user.password);
@@ -45,7 +45,7 @@ async function userSignInController(req,res){
             throw new Error("Plesae check your password");
         }
 
-        console.log("checkPassword",checkPassword)
+        console.log("checkPassword",checkPassword);
 
     }catch(error){
         res.json({
@@ -55,4 +55,5 @@ async function userSignInController(req,res){
         })
     }
 }
+
 module.exports = userSignInController;
