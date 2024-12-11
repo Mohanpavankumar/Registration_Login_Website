@@ -23,7 +23,6 @@ async function authToken(req, res, next) {
                     success: false,
                 });
             }
-
             console.log("decoded", decoded);
 
             req.userId = decoded?._id; // Ensure _id is available
