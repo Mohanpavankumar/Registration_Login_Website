@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext, useState } from 'react';
 import loginicons from '../assets/signin.gif';
 import { FaEye } from "react-icons/fa";
 import { FaEyeSlash } from "react-icons/fa";
@@ -13,12 +13,12 @@ const Login = () => {
         email : "",
         password : ""
     })
-    const navigate = useNavigate()
+    const navigate = useNavigate();
 
-    const { fetchUserDetails } = useContext(Context)
+    const { fetchUserDetails } = useContext(Context);
 
     const handleOnChange = (e) =>{
-        const { name, value } = e.target
+        const { name, value } = e.target;
 
         setData((prev) =>{
             return{
