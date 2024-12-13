@@ -24,6 +24,9 @@ This project is a **MERN stack** application that provides user authentication f
 - **bcryptjs**: Password hashing for secure storage.
 - **jsonwebtoken (JWT)**: User authentication with tokens.
 
+
+## Contributions
+- Contributions are welcome, you can suggest any modifications fkr the better featues.
 ## Setup and Installation
 Follow these steps to run the project locally.
 
