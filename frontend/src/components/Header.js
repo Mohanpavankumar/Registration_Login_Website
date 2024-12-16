@@ -7,9 +7,9 @@ import { setUserDetails } from '../store/userSlice';
 
 const Header = () => {
   const user = useSelector(state => state?.user?.user)
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
 
-  console.log("User Header",user)
+  console.log("User Header",user);
 
   const handleLogout = async() =>{
     const fetchData = await fetch(SummaryApi.logout_user.url,{
@@ -17,15 +17,15 @@ const Header = () => {
       credentials : 'include'
     })
 
-    const data = await fetchData.json()
+    const data = await fetchData.json();
 
     //toast messages
     if(data.success){
-      toast.success(data.message)
-      dispatch(setUserDetails(null))
+      toast.success(data.message);
+      dispatch(setUserDetails(null));
     }
     if(data.error){
-      toast.error(data.message)
+      toast.error(data.message);
     }
   }
   return (
