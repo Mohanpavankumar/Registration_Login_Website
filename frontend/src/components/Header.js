@@ -28,6 +28,7 @@ const Header = () => {
       toast.error(data.message);
     }
   }
+  
   return (
     <header className='h-16 shadow-md bg-white'>
       <div className='h-full container mx-auto flex items-center px-6 justify-between'>
@@ -41,8 +42,8 @@ const Header = () => {
           <div>
             <Link to='/sign-up' className='px-3 py-1 text-blue-600 font-bold hover:text-blue-800'>Sign Up</Link>
           </div>
-          <div>
-          {
+           <div>
+            {
               user?._id ? (
                 <Link to='/sign-up' onClick={handleLogout} className='px-3 py-1 rounded-full text-white bg-blue-600 hover:bg-blue-800'>Logout</Link>
               )
