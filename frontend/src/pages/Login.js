@@ -29,7 +29,7 @@ const Login = () => {
     }
 
     const handleSubmit = async(e) =>{
-        e.preventDefault()
+        e.preventDefault();
 
         const dataResponse = await fetch(SummaryApi.signIn.url,{
             method : SummaryApi.signIn.method,
@@ -40,16 +40,16 @@ const Login = () => {
             body : JSON.stringify(data)
         })
 
-    const dataApi = await dataResponse.json()
+    const dataApi = await dataResponse.json();
 
     //toast messages
     if(dataApi.success){
-        toast.success(dataApi.message)
-        navigate("/")
-        fetchUserDetails()
+        toast.success(dataApi.message);
+        navigate("/");
+        fetchUserDetails();
     }
     if(dataApi.error){
-        toast.error(dataApi.message)
+        toast.error(dataApi.message);
     }
     }
 
@@ -116,4 +116,4 @@ const Login = () => {
   )
 }
 
-export default Login
+export default Login;

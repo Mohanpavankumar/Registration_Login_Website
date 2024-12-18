@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 import loginicons from '../assets/signin.gif';
 import { FaEye } from "react-icons/fa";
 import { FaEyeSlash } from "react-icons/fa";
@@ -16,10 +16,10 @@ const SignUp = () => {
         confirmPassword : "",
     })
 
-    const navigate = useNavigate()
+    const navigate = useNavigate();
 
     const handleOnChange = (e) =>{
-        const { name, value } = e.target
+        const { name, value } = e.target;
 
         setData((prev) =>{
             return{
@@ -30,7 +30,7 @@ const SignUp = () => {
     }
 
     const handleSubmit = async(e) =>{
-        e.preventDefault()
+        e.preventDefault();
 
         //check password and confirmpassword are same or not
         if(data.password === data.confirmPassword){
@@ -43,19 +43,19 @@ const SignUp = () => {
                 body : JSON.stringify(data)
             })
     
-            const dataApi = await dataResponse.json()
+            const dataApi = await dataResponse.json();
 
             //toast messages
             if(dataApi.success){
-                toast.success(dataApi.message)
-                navigate("/login")
+                toast.success(dataApi.message);
+                navigate("/login");
             }
             if(dataApi.error){
-                toast.error(dataApi.message)
+                toast.error(dataApi.message);
             }
             
         }else{
-            console.log("Please check Password and ConfirmPaassword!")
+            console.log("Please check Password and ConfirmPaassword!");
         }
     }
 
@@ -158,4 +158,4 @@ const SignUp = () => {
   )
 }
 
-export default SignUp
+export default SignUp;
