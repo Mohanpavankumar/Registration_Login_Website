@@ -7,7 +7,7 @@ async function userLogout(req,res){
             message : "Logged out Successfully",
             error : false,
             success : true,
-            data : []
+            data : [],
         })
     } catch (error) {
         res.json({
@@ -18,4 +18,4 @@ async function userLogout(req,res){
     }
 }
 
-module.exports = userLogout
+module.exports = userLogout;
