@@ -53,7 +53,6 @@ function App() {
           <Outlet/>
         </main>
         <Footer/>
-
       </Context.Provider>
     </>
   );
