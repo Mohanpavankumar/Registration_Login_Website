@@ -1,6 +1,31 @@
 import React from 'react'
+import { toast } from 'react-toastify';
 
 const Conatct = () => {
+
+  const handleSubmit = async(e) =>{
+    e.preventDefault();
+
+    const dataResponse = await fetch(SummaryApi.signIn.url,{
+        method : SummaryApi.signIn.method,
+        credentials : "include",
+        headers : {
+            "content-type" : "application/json"
+        },
+        body : JSON.stringify(data)
+    })
+
+  const dataApi = await dataResponse.json();
+
+  //toast messages
+  if(dataApi.success){
+      toast.success(dataApi.message);
+  }
+  if(dataApi.error){
+      toast.error(dataApi.message);
+  }
+  }
+
   return (
     <div>
       <form className='p-5 flex flex-col gap-2' onSubmit={handleSubmit}>
@@ -12,13 +37,9 @@ const Conatct = () => {
               placeholder='enter name'
               name='name'
               value={data.name}
-              onChange={handleOnChange}
               required 
               className='w-full h-full outline-none bg-transparent'/>
-          </div>
-          <Link to={'/forgot-Password'} className='block w-fit ml-auto hover:underline hover:text-blue-600 '>
-              Submit
-          </Link>
+        </div>
         </div>
         <div className='grid'>
             <label>Email :</label>
@@ -27,7 +48,16 @@ const Conatct = () => {
                 placeholder='enter email'
                 name= 'email'
                 value={data.email}
-                onChange={handleOnChange}
+                required 
+                className='w-full h-full outline-none bg-transparent'/>
+            </div>
+        </div>
+        <div className='grid'>
+            <label>Description :</label>
+            <div className='bg-slate-100 p-2'>
+                <input type='text' 
+                placeholder='enter description'
+                name= 'text'
                 required 
                 className='w-full h-full outline-none bg-transparent'/>
             </div>
