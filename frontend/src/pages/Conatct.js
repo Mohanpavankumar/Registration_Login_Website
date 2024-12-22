@@ -46,13 +46,13 @@ const Conatct = () => {
             <div className='bg-slate-100 p-2'>
                 <input type='email' 
                 placeholder='enter email'
-                name= 'email'
+                name='email'
                 value={data.email}
                 required 
                 className='w-full h-full outline-none bg-transparent'/>
             </div>
         </div>
-        <div className='grid'>
+        <div>
             <label>Description :</label>
             <div className='bg-slate-100 p-2'>
                 <input type='text' 
