@@ -1,4 +1,4 @@
-# MERN Authentication System
+# MERN AUTHENTICATION SYSTEM
 
 This project is a **MERN stack** application that provides user authentication features, including login, signup, and forgot password. The application demonstrates secure user management with JWT-based authentication, password hashing, and integration of React with a Node.js backend.
 
