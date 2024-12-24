@@ -6,15 +6,6 @@ const Conatct = () => {
   const handleSubmit = async(e) =>{
     e.preventDefault();
 
-    const dataResponse = await fetch(SummaryApi.signIn.url,{
-        method : SummaryApi.signIn.method,
-        credentials : "include",
-        headers : {
-            "content-type" : "application/json"
-        },
-        body : JSON.stringify(data)
-    })
-
   const dataApi = await dataResponse.json();
 
   //toast messages
@@ -62,7 +53,7 @@ const Conatct = () => {
                 className='w-full h-full outline-none bg-transparent'/>
             </div>
         </div>
-        <button className='bg-blue-600 text-white px-6 py-2 w-full max-w-[150px] rounded-full hover:scale-110 hover:bg-blue-800 transition-all mx-auto block mt-8'>Send</button>
+        <button type='email' className='bg-blue-600 text-white px-6 py-2 w-full max-w-[150px] rounded-full hover:scale-110 hover:bg-blue-800 transition-all mx-auto block mt-8'>Send</button>
       </form>
     </div>
   )
