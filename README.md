@@ -16,6 +16,7 @@ This project is a **MERN stack** application that provides user authentication f
 - **React Router**: Navigation and routing.
 - **Tailwind CSS**: Responsive and modern UI styling.
 - **React Toastify**: Notifications for user feedback.
+- **React reduxjs/toolkit**: To simplify the process of writing Redux logic by providing a set of utilities.
 
 ### Backend
 - **Node.js & Express**: Server and REST API development.
