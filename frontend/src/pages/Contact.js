@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import SummaryApi from './../EndPoints/index';
+import SummaryApi from '../EndPoints/index';
 import { toast } from 'react-toastify';
 
-const Conatct = () => {
+const Contact = () => {
   const [formData, setFormData] = useState({ 
     name: '', 
     email: '', 
@@ -85,4 +85,4 @@ const Conatct = () => {
   )
 }
 
-export default Conatct;
+export default Contact;
