@@ -4,7 +4,7 @@ import App from './../App';
 import Home from './../pages/Home';
 import ForgotPassword from './../pages/ForgotPassword';
 import SignUp from './../pages/SignUp';
-import Conatct from './../pages/Conatct';
+import Contact from './../pages/Contact';
 
 const router = createBrowserRouter([
     {
@@ -29,7 +29,7 @@ const router = createBrowserRouter([
             },
             {
                 path : "contact",
-                element : <Conatct/>
+                element : <Contact/>
             }
         ]
     }
