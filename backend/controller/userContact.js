@@ -1,4 +1,4 @@
-
+const contactModel = require("../models/contactModel")
 
 async function userContact(req,res){
     try{
