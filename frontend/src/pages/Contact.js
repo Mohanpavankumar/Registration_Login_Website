@@ -21,8 +21,6 @@ const Contact = () => {
   const handleSubmit = async(e) =>{
     e.preventDefault();
     
-    setFormData({ name: '', email: '', message: '' });
-
     const dataResponse = await fetch(SummaryApi.Contact.url,{
         method : SummaryApi.Contact.method,
         credentials : "include",
@@ -37,6 +35,7 @@ const Contact = () => {
   //toast messages
   if(dataApi.success){
       toast.success(dataApi.message);
+      setFormData({ name: '', email: '', message: '' });
   }
   if(dataApi.error){
       toast.error(dataApi.message);
@@ -75,7 +74,7 @@ const Contact = () => {
             <div className='bg-slate-100 p-2'>
                 <input type='text' 
                 placeholder='enter message'
-                name= 'text'
+                name= 'message'
                 value={formData.message}
                 onChange={handleChange}
                 className='w-full h-full outline-none bg-transparent'/>
