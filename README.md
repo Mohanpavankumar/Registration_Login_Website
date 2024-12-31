@@ -9,6 +9,7 @@ This project is a **MERN stack** application that provides user authentication f
 - **JWT Authentication:** Secure access with JWT tokens stored in HTTP-only cookies.
 - **Responsive Design:** User-friendly and responsive UI built with React.
 - **Toast Notifications:** Feedback on user actions using `react-toastify`.
+- **Contact Page:** Send details to admin to connect using contact page.
 
 ## Tech Stack
 ### Frontend
