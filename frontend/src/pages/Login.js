@@ -52,7 +52,6 @@ const Login = () => {
         toast.error(dataApi.message);
     }
     }
-
     
   return (
     <section id='login'>
@@ -107,9 +106,7 @@ const Login = () => {
 
                 <button className='bg-blue-600 text-white px-6 py-2 w-full max-w-[150px] rounded-full hover:scale-110 hover:bg-blue-800 transition-all mx-auto block mt-8'>Login</button>
             </form>
-
             <p className='my-2 px-6'>Don't have account? <Link to={'/sign-up'} className='text-blue-600 hover:underline hover:text-blue-800'>Sign up</Link></p>
-
             </div>
         </div>
     </section>
