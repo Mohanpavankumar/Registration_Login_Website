@@ -45,48 +45,48 @@ const Contact = () => {
   return (
     <section id='login'>
         <div className='mx-auto container p-8'>
-            <div className='bg-white p-2 py-5 w-full max-w-md mx-auto shadow-md shadow-blue-600'>
-      <form className='p-5 flex flex-col gap-2' onSubmit={handleSubmit}>
-        <div className='grid'>
-            <label>Name :</label>
-            <div className='bg-slate-100 p-2'>
-                <input type='text' 
-                placeholder='enter name'
-                name= 'name'
-                value={formData.name}
-                onChange={handleChange}
-                required 
-                className='w-full h-full outline-none bg-transparent'/>
-            </div>
-        </div>
-        <div className='grid'>
-            <label>Email :</label>
-            <div className='bg-slate-100 p-2'>
-                <input type='email' 
-                placeholder='enter email'
-                name='email'
-                value={formData.email}
-                onChange={handleChange}
-                required 
-                className='w-full h-full outline-none bg-transparent'/>
-            </div>
-        </div>
-        <div>
-            <label>Message :</label>
-            <div className='bg-slate-100 p-2'>
-                <input type='text' 
-                placeholder='enter message'
-                name= 'message'
-                value={formData.message}
-                onChange={handleChange}
-                className='w-full h-full outline-none bg-transparent'/>
-            </div>
-        </div>
-        <button type='submit' className='bg-blue-600 text-white px-6 py-2 w-full max-w-[150px] rounded-full hover:scale-110 hover:bg-blue-800 transition-all mx-auto block mt-8'>Send</button>
-      </form>
+          <div className='bg-white p-2 py-5 w-full max-w-md mx-auto shadow-md shadow-blue-600'>
+            <form className='p-5 flex flex-col gap-2' onSubmit={handleSubmit}>
+              <div className='grid'>
+                  <label>Name :</label>
+                  <div className='bg-slate-100 p-2'>
+                      <input type='text' 
+                      placeholder='enter name'
+                      name= 'name'
+                      value={formData.name}
+                      onChange={handleChange}
+                      required 
+                      className='w-full h-full outline-none bg-transparent'/>
+                  </div>
+              </div>
+              <div className='grid'>
+                  <label>Email :</label>
+                  <div className='bg-slate-100 p-2'>
+                      <input type='email' 
+                      placeholder='enter email'
+                      name='email'
+                      value={formData.email}
+                      onChange={handleChange}
+                      required 
+                      className='w-full h-full outline-none bg-transparent'/>
+                  </div>
+              </div>
+              <div>
+                  <label>Message :</label>
+                  <div className='bg-slate-100 p-2'>
+                      <input type='text' 
+                      placeholder='enter message'
+                      name= 'message'
+                      value={formData.message}
+                      onChange={handleChange}
+                      className='w-full h-full outline-none bg-transparent'/>
+                  </div>
+              </div>
+              <button type='submit' className='bg-blue-600 text-white px-6 py-2 w-full max-w-[150px] rounded-full hover:scale-110 hover:bg-blue-800 transition-all mx-auto block mt-8'>Send</button>
+            </form>
       {responseMessage && <p>{responseMessage}</p>}
-    </div>
-    </div>
+        </div>
+      </div>
     </section>
   )
 }
