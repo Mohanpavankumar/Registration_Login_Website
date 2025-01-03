@@ -60,7 +60,6 @@ const Login = () => {
                 <div className='w-20 h-20 mx-auto'>
                     <img src={loginicons} alt='login icons' className='rounded-full' />
                 </div>
-            
             <form className='p-5 flex flex-col gap-2' onSubmit={handleSubmit}>
                 <div className='grid'>
                     <label>Email :</label>
@@ -74,7 +73,6 @@ const Login = () => {
                         className='w-full h-full outline-none bg-transparent'/>
                     </div>
                 </div>
-
                 <div>
                     <label>Password :</label>
                     <div className='bg-slate-100 p-2 flex'>
@@ -103,7 +101,6 @@ const Login = () => {
                         Forgot Password ?
                     </Link>
                 </div>
-
                 <button className='bg-blue-600 text-white px-6 py-2 w-full max-w-[150px] rounded-full hover:scale-110 hover:bg-blue-800 transition-all mx-auto block mt-8'>Login</button>
             </form>
             <p className='my-2 px-6'>Don't have account? <Link to={'/sign-up'} className='text-blue-600 hover:underline hover:text-blue-800'>Sign up</Link></p>
