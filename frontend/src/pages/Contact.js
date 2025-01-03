@@ -8,7 +8,6 @@ const Contact = () => {
     email: '', 
     message: '' 
   });
-  const [responseMessage, setResponseMessage] = useState('');
 
   const handleChange = (e) => {
       const { name, value } = e.target;
@@ -85,7 +84,6 @@ const Contact = () => {
               </div>
               <button type='submit' className='bg-blue-600 text-white px-6 py-2 w-full max-w-[150px] rounded-full hover:scale-110 hover:bg-blue-800 transition-all mx-auto block mt-8'>Send</button>
             </form>
-      {responseMessage && <p>{responseMessage}</p>}
         </div>
       </div>
     </section>
