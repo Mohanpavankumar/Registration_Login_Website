@@ -46,6 +46,7 @@ const Contact = () => {
     <section id='login'>
         <div className='mx-auto container p-8'>
           <div className='bg-white p-2 py-5 w-full max-w-md mx-auto shadow-md shadow-blue-600'>
+            <span className='flex text-blue-600 font-bold justify-center'>Contact Form</span> 
             <form className='p-5 flex flex-col gap-2' onSubmit={handleSubmit}>
               <div className='grid'>
                   <label>Name :</label>
