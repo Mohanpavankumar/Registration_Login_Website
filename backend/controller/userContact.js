@@ -1,4 +1,4 @@
-const contactModel = require("../models/contactModel")
+const contactModel = require("../models/contactModel");
 
 async function userContact(req,res){
     try{
@@ -22,7 +22,7 @@ async function userContact(req,res){
         res.status(200).json({
             message : "Contact details saved successfully!",
             success : true,
-            error : false
+            error : false,
         })
     }
     catch(error){
