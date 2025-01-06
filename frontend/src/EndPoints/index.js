@@ -1,4 +1,4 @@
-const backendDomain = "https://registration-login-website-ksg6.onrender.com";
+const backendDomain = "http://localhost:8000";
 
 const SummaryApi = {
     signUp: {
