@@ -20,14 +20,14 @@ function App() {
         method: SummaryApi.current_user.method,
         credentials: "include",
       });
-
+  
       if (!dataResponse.ok) {
         console.error("Error fetching user details:", dataResponse.status, dataResponse.statusText);
         return;
       }
-
+  
       const dataApi = await dataResponse.json();
-
+  
       if (dataApi.success && dataApi.data) {
         console.log("Fetched user data:", dataApi.data);
         dispatch(setUserDetails(dataApi.data)); // Update Redux store
@@ -36,8 +36,10 @@ function App() {
       }
     } catch (error) {
       console.error("Error in fetchUserDetails:", error);
+      alert("There was an issue fetching the user details. Please try again.");
     }
   };
+  
 
   useEffect(() => {
     fetchUserDetails();
