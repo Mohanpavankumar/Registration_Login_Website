@@ -15,7 +15,7 @@ const Contact = () => {
         ...formData,
         [name]: value
       });
-    };
+      };
 
   const handleSubmit = async(e) =>{
     e.preventDefault();
@@ -31,14 +31,14 @@ const Contact = () => {
 
   const dataApi = await dataResponse.json();
 
-  //toast messages
-  if(dataApi.success){
-      toast.success(dataApi.message);
-      setFormData({ name: '', email: '', message: '' });
-  }
-  if(dataApi.error){
-      toast.error(dataApi.message);
-  }
+    //toast messages
+    if(dataApi.success){
+        toast.success(dataApi.message);
+        setFormData({ name: '', email: '', message: '' });
+    }
+    if(dataApi.error){
+        toast.error(dataApi.message);
+    }
   }
 
   return (
