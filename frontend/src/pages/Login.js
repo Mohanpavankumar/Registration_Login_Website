@@ -31,14 +31,14 @@ const Login = () => {
     const handleSubmit = async(e) =>{
         e.preventDefault();
 
-        const dataResponse = await fetch(SummaryApi.signIn.url,{
-            method : SummaryApi.signIn.method,
-            credentials : "include",
-            headers : {
-                "content-type" : "application/json"
-            },
-            body : JSON.stringify(data)
-        })
+    const dataResponse = await fetch(SummaryApi.signIn.url,{
+        method : SummaryApi.signIn.method,
+        credentials : "include",
+        headers : {
+            "content-type" : "application/json"
+        },
+        body : JSON.stringify(data)
+    })
 
     const dataApi = await dataResponse.json();
 
@@ -53,7 +53,7 @@ const Login = () => {
     }
     }
     
-  return (
+    return (
     <section id='login'>
         <div className='mx-auto container p-8'>
             <div className='bg-white p-2 py-5 w-full max-w-md mx-auto shadow-md shadow-blue-600'>
